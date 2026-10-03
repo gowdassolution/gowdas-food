@@ -55,6 +55,20 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   margin-bottom: 1.1rem;
 }
 
+.eyebrow--opening {
+  display: inline-block; position: relative;
+  font-size: clamp(0.9rem, 1.9vw, 1.15rem);
+  letter-spacing: 0.26em; font-weight: 600;
+  background: linear-gradient(100deg, var(--gold-deep), var(--gold-light) 55%, var(--gold));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 1.6rem; padding-bottom: 0.7rem;
+}
+.eyebrow--opening::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 62px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
 .section { padding: clamp(5rem, 10vw, 9rem) clamp(1.4rem, 5vw, 4rem); max-width: var(--container); margin: 0 auto; }
 .section__head { text-align: center; max-width: 640px; margin: 0 auto clamp(3rem, 6vw, 5rem); }
 .section__lead { color: var(--cream-dim); margin-top: 1.2rem; font-size: 1.05rem; }
@@ -474,6 +488,13 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .gpanel[data-img="g7"] { background-image: url('assets/onion-uttapam.webp'); }
 .gpanel[data-img="g8"] { background-image: url('assets/medu-vada.webp'); }
 .gpanel[data-img="g9"] { background-image: url('assets/holige.webp'); }
+.gpanel[data-img="g10"] { background-image: url('assets/chicken-biryani-2.webp'); }
+.gpanel[data-img="g11"] { background-image: url('assets/veg-biryani.webp'); }
+.gpanel[data-img="g12"] { background-image: url('assets/tatte-idli-2.png'); }
+.gpanel[data-img="g13"] { background-image: url('assets/set-dosa.webp'); }
+.gpanel[data-img="g14"] { background-image: url('assets/idli-vada.webp'); }
+.gpanel[data-img="g15"] { background-image: url('assets/onion-pakoda-2.webp'); }
+.gpanel[data-img="g16"] { background-image: url('assets/bread-aloo-bonda.webp'); }
 
 /* touch: no hover - show captions, remove expand */
 @media (hover: none) {

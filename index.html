@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=29" />
+  <link rel="stylesheet" href="styles.css?v=33" />
 </head>
 <body>
 
   <!-- Loader -->
   <div class="loader" id="loader">
     <div class="loader-mark">
-      <img src="assets/logo.jpg" alt="Gowda's Food" class="loader-logo" />
+      <img src="assets/logo.jpg?v=2" alt="Gowda's Food" class="loader-logo" />
     </div>
   </div>
 
@@ -42,7 +42,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="brand" aria-label="Gowda's Food home">
-        <img src="assets/logo.jpg" alt="Gowda's Food" class="brand__mark" />
+        <img src="assets/logo.jpg?v=2" alt="Gowda's Food" class="brand__mark" />
         <span class="brand__text">
           <span class="brand__name">GOWDA'S</span>
           <span class="brand__sub">FOOD</span>
@@ -195,6 +195,7 @@
 
     <div class="menu-filter reveal" id="menuFilter">
       <button class="menu-filter__btn is-active" data-filter="all">All</button>
+      <button class="menu-filter__btn" data-filter="sunday">Sunday Special</button>
       <button class="menu-filter__btn" data-filter="biryani">Biryani</button>
       <button class="menu-filter__btn" data-filter="dosa">Dosa</button>
       <button class="menu-filter__btn" data-filter="idli">Idli &amp; Vada</button>
@@ -205,6 +206,33 @@
 
     <div class="menu-card reveal">
       <div class="menu-cats">
+        <section class="menu-cat menu-cat--special" data-cat="sunday">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Sunday Special</h3>
+            <p>Sundays · 9:00 AM – 12:00 PM</p>
+          </header>
+          <ul class="menu-items menu-items--special">
+            <li>
+              <div class="m-row"><span class="m-name">Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name">Thatte Idli</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+              <span class="m-with">Red chutney powder, tomato chutney, sambar, 1 medhu vada</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name">Puri &amp; Green Chicken Gravy</span><span class="m-dots"></span><span class="m-price">$15.99</span></div>
+              <span class="m-with">Two puri served with green chicken gravy</span>
+            </li>
+          </ul>
+        </section>
+
+        <div class="menu-reg" data-reg>
+          <h4>✦ Regular Menu ✦</h4>
+          <p>Served evenings · Wed–Sat 3:00 PM – 9:00 PM · Sun 4:00 PM – 9:00 PM</p>
+        </div>
+
         <section class="menu-cat" data-cat="biryani">
           <header class="menu-cat__head">
             <span class="menu-cat__orn">✦</span>
@@ -338,6 +366,11 @@
         </section>
       </div>
     </div>
+
+    <div class="allergy reveal">
+      <span class="allergy__icon" aria-hidden="true">!</span>
+      <p><strong>Food Allergy Notice</strong> &nbsp;·&nbsp; Our food may have come in contact with or contain peanuts, tree nuts, soy, milk, eggs, wheat, shellfish, or fish. Please ask a staff member about the ingredients used in your meal before ordering.</p>
+    </div>
   </section>
 
   <!-- Marquee strip -->
@@ -365,6 +398,7 @@
     </div>
 
     <div class="gallery-strip reveal">
+      <figure class="gpanel" data-img="g17"><figcaption class="gpanel__cap">Puri &amp; Green Chicken Gravy</figcaption></figure>
       <figure class="gpanel" data-img="g11"><figcaption class="gpanel__cap">Vegetable Biryani</figcaption></figure>
       <figure class="gpanel" data-img="g1"><figcaption class="gpanel__cap">Egg Biryani</figcaption></figure>
       <figure class="gpanel" data-img="g10"><figcaption class="gpanel__cap">Chicken Biryani</figcaption></figure>
@@ -414,7 +448,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
-        <img src="assets/logo.jpg" alt="Gowda's Food" class="footer__mark" />
+        <img src="assets/logo.jpg?v=2" alt="Gowda's Food" class="footer__mark" />
         <span class="brand__name">GOWDA'S FOOD</span>
         <p class="footer__tag">Made with tradition. Served with love.</p>
       </div>
@@ -436,6 +470,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=16"></script>
+  <script src="script.js?v=31"></script>
 </body>
 </html>

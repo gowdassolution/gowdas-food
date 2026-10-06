@@ -417,6 +417,39 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 }
 .menu-cats.is-single { grid-template-columns: minmax(0, 580px); justify-content: center; }
 
+/* Sunday Special highlight */
+.menu-cat--special {
+  grid-column: 1 / -1;
+  border: 1px solid rgba(230,184,76,0.5); border-radius: 10px;
+  background:
+    radial-gradient(130% 130% at 50% 0%, rgba(230,184,76,0.09), transparent 62%),
+    var(--black-soft);
+  padding: 1.9rem 2rem 1.6rem; box-shadow: 0 20px 44px -28px rgba(0,0,0,0.9);
+}
+.menu-cat--special .menu-cat__head h3 { color: var(--gold); }
+.menu-items--special { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.1rem 2.8rem; }
+
+/* Food allergy notice */
+.allergy {
+  max-width: 1000px; margin: 2.6rem auto 0;
+  display: flex; align-items: flex-start; gap: 1rem;
+  background: rgba(230,184,76,0.05);
+  border: 1px solid var(--line); border-left: 3px solid var(--gold);
+  border-radius: 8px; padding: 1.2rem 1.5rem;
+}
+.allergy__icon {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid var(--gold); color: var(--gold);
+  display: grid; place-items: center; font-weight: 700; font-size: 1rem; margin-top: 1px;
+}
+.allergy p { color: var(--cream-dim); font-size: 0.9rem; line-height: 1.65; }
+.allergy strong { color: var(--gold); font-family: var(--font-serif); font-size: 1.1rem; font-weight: 600; letter-spacing: 0.02em; }
+
+/* Regular menu divider (evening timings) */
+.menu-reg { grid-column: 1 / -1; text-align: center; margin: 1.6rem 0 0.4rem; }
+.menu-reg h4 { font-family: var(--font-serif); font-size: 1.55rem; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; }
+.menu-reg p { font-size: 0.74rem; color: var(--cream-dim); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; }
+
 .menu-cat__head { text-align: center; margin-bottom: 1.6rem; }
 .menu-cat__orn { display: block; color: var(--gold); font-size: 0.85rem; margin-bottom: 0.3rem; }
 .menu-cat__head h3 {
@@ -495,6 +528,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .gpanel[data-img="g14"] { background-image: url('assets/idli-vada.webp'); }
 .gpanel[data-img="g15"] { background-image: url('assets/onion-pakoda-2.webp'); }
 .gpanel[data-img="g16"] { background-image: url('assets/bread-aloo-bonda.webp'); }
+.gpanel[data-img="g17"] { background-image: url('assets/puri-green-chicken.webp'); }
 
 /* touch: no hover - show captions, remove expand */
 @media (hover: none) {

@@ -59,6 +59,7 @@
   if (menuFilter) {
     var cats = document.querySelectorAll('.menu-cat');
     var catsWrap = document.querySelector('.menu-cats');
+    var regNote = document.querySelector('.menu-reg');
     menuFilter.addEventListener('click', function (e) {
       var btn = e.target.closest('.menu-filter__btn');
       if (!btn) return;
@@ -69,6 +70,7 @@
       cats.forEach(function (cat) {
         cat.hidden = !(f === 'all' || cat.getAttribute('data-cat') === f);
       });
+      if (regNote) regNote.hidden = (f === 'sunday');
       if (catsWrap) catsWrap.classList.toggle('is-single', f !== 'all');
     });
   }

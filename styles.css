@@ -412,7 +412,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 }
 
 .menu-cats {
-  display: grid; grid-template-columns: repeat(2, 1fr);
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: clamp(2.2rem, 4vw, 3.4rem) clamp(2.5rem, 5vw, 4.5rem); align-items: start;
 }
 .menu-cats.is-single { grid-template-columns: minmax(0, 580px); justify-content: center; }
@@ -470,8 +470,8 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .menu-cat__head p { font-size: 0.76rem; color: var(--cream-dim); font-style: italic; margin-top: 0.55rem; letter-spacing: 0.03em; }
 
 .menu-items { list-style: none; display: grid; gap: 1.1rem; }
-.m-row { display: flex; align-items: baseline; gap: 0.5rem; }
-.m-name { font-family: var(--font-serif); font-size: 1.22rem; color: var(--cream); font-weight: 500; flex: none; }
+.m-row { display: flex; align-items: baseline; align-items: last baseline; gap: 0.5rem; min-width: 0; }
+.m-name { font-family: var(--font-serif); font-size: 1.22rem; color: var(--cream); font-weight: 500; flex: 0 1 auto; min-width: 0; overflow-wrap: anywhere; line-height: 1.25; }
 .m-dots { flex: 1 1 auto; min-width: 1.2rem; border-bottom: 1px dotted rgba(230,184,76,0.5); transform: translateY(-0.32em); }
 .m-price { font-family: var(--font-serif); font-size: 1.2rem; color: var(--gold); font-weight: 600; flex: none; }
 .m-with { display: block; font-size: 0.72rem; color: var(--cream-dim); text-transform: uppercase; letter-spacing: 0.08em; line-height: 1.5; margin-top: 0.3rem; }
@@ -613,7 +613,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   .nav__links a { font-size: 1rem; }
   .about__grid { grid-template-columns: 1fr; }
   .about__media { margin: 0 0 3rem; }
-  .menu-cats { grid-template-columns: 1fr; }
+  .menu-cats { grid-template-columns: minmax(0, 1fr); }
   /* gallery becomes a swipeable carousel */
   .gallery-strip {
     height: auto; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -634,6 +634,12 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   .footer__inner { grid-template-columns: 1fr; }
   .hero__actions { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
   .btn { width: 100%; }
+  /* menu: slimmer nested frames so dish names + prices fit */
+  .menu-card { padding: 1.6rem 1.05rem; }
+  .menu-card::before { inset: 7px; }
+  .menu-cat--special { padding: 1.5rem 1.05rem 1.3rem; }
+  .m-name { font-size: 1.12rem; }
+  .m-price { font-size: 1.1rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

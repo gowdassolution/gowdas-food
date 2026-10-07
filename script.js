@@ -20,18 +20,24 @@
   /* ---- Mobile menu ---- */
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navLinks');
-  var closeMenu = function () {
-    links.classList.remove('open');
-    toggle.classList.remove('active');
-    toggle.setAttribute('aria-expanded', 'false');
-  };
-  toggle.addEventListener('click', function () {
-    var open = links.classList.toggle('open');
+  var setMenu = function (open) {
+    links.classList.toggle('open', open);
     toggle.classList.toggle('active', open);
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.documentElement.classList.toggle('nav-open', open);
+  };
+  var closeMenu = function () { setMenu(false); };
+  toggle.addEventListener('click', function () {
+    setMenu(!links.classList.contains('open'));
   });
   links.querySelectorAll('a').forEach(function (a) {
     a.addEventListener('click', closeMenu);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeMenu();
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 820) closeMenu();
   });
 
   /* ---- Reveal on scroll ---- */

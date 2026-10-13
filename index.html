@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=47" />
+  <link rel="stylesheet" href="styles.css?v=48" />
 </head>
 <body>
 
@@ -70,7 +70,15 @@
   <section class="hero" id="home">
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__overlay" aria-hidden="true"></div>
+    <canvas class="petals" id="petals" aria-hidden="true"></canvas>
     <div class="hero__content">
+      <!-- Grand opening badge: shown by script.js only around the opening date -->
+      <div class="opening" id="opening" hidden>
+        <span class="opening__spark" aria-hidden="true">✦</span>
+        <span class="opening__label">Grand Opening</span>
+        <span class="opening__date">Thursday · October 15, 2026</span>
+        <span class="opening__count" id="openingCount"></span>
+      </div>
       <p class="eyebrow reveal">A Celebration of South Indian Flavour</p>
       <h1 class="hero__title reveal">
         <span class="line">Timeless Recipes,</span>
@@ -477,6 +485,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=32"></script>
+  <script src="script.js?v=33"></script>
 </body>
 </html>

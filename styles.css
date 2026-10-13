@@ -436,6 +436,13 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .menu-cat--special .menu-cat__head h3 { color: var(--gold); }
 .menu-items--special { grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 1.1rem 2.8rem; }
 
+/* Prices note (menu heading, read before any prices) */
+.tax-note {
+  margin: 1.1rem auto 0; text-align: center;
+  font-size: 0.9rem; font-weight: 600; color: var(--cream);
+  text-transform: uppercase; letter-spacing: 0.12em;
+}
+
 /* Food allergy notice */
 :root { --alert-red: #e5484d; }
 .allergy {
@@ -545,6 +552,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .gpanel[data-img="g15"] { background-image: url('assets/onion-pakoda-2.webp'); }
 .gpanel[data-img="g16"] { background-image: url('assets/bread-aloo-bonda.webp'); }
 .gpanel[data-img="g17"] { background-image: url('assets/puri-green-chicken.webp'); }
+.gpanel[data-img="g18"] { background-image: url('assets/thatte-idli-chicken-sambar.webp'); }
 
 /* touch: no hover - show captions, remove expand */
 @media (hover: none) {

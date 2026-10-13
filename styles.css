@@ -443,6 +443,21 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   text-transform: uppercase; letter-spacing: 0.12em;
 }
 
+/* Veg / non-veg marks (US style: green leaf = vegetarian, red drumstick = meat or egg) */
+.diet {
+  display: inline-block; flex: none;
+  width: 0.95em; height: 0.95em; margin-right: 0.45em; vertical-align: -0.08em;
+  background: no-repeat center / contain;
+}
+.diet--veg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233fae5a' d='M6.05 8.05c-2.73 2.73-2.73 7.15-.02 9.88 1.47-3.4 4.09-6.24 7.36-7.93-2.77 2.34-4.71 5.61-5.39 9.32 2.6 1.23 5.8.78 7.95-1.37C19.43 14.47 20 4 20 4S9.53 4.57 6.05 8.05z'/%3E%3C/svg%3E"); }
+.diet--nonveg { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d9473d'%3E%3Ccircle cx='15' cy='9' r='6.2'/%3E%3Cpath d='M11.6 12.4 6.2 17.8' stroke='%23d9473d' stroke-width='2.6' stroke-linecap='round'/%3E%3Ccircle cx='4.7' cy='17.4' r='1.9'/%3E%3Ccircle cx='6.6' cy='19.3' r='1.9'/%3E%3C/svg%3E"); }
+.diet-legend {
+  margin: 0.7rem auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem 1.6rem;
+  font-size: 0.8rem; color: var(--cream-dim); text-transform: uppercase; letter-spacing: 0.12em;
+}
+.diet-legend .diet { font-size: 1.2rem; margin-right: 0.35em; vertical-align: -0.22em; }
+.diet-legend__item { white-space: nowrap; }
+
 /* Food allergy notice */
 :root { --alert-red: #e5484d; }
 .allergy {

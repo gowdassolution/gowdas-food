@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=49" />
+  <link rel="stylesheet" href="styles.css?v=53" />
 </head>
 <body>
 
@@ -71,12 +71,12 @@
     <div class="hero__bg" aria-hidden="true"></div>
     <div class="hero__overlay" aria-hidden="true"></div>
     <div class="hero__content">
-      <!-- Coming soon badge (opening postponed; date to be announced) -->
+      <!-- Now open badge -->
       <div class="opening">
         <span class="opening__spark" aria-hidden="true">✦</span>
-        <span class="opening__label">Coming Soon</span>
-        <span class="opening__date">Opening date to be announced</span>
-        <span class="opening__count">Stay tuned</span>
+        <span class="opening__label">Opened Now</span>
+        <span class="opening__date">Now serving Knoxville</span>
+        <a href="#contact" class="opening__count">Visit us</a>
       </div>
       <p class="eyebrow reveal">A Celebration of South Indian Flavour</p>
       <h1 class="hero__title reveal">
@@ -104,15 +104,15 @@
           <div class="about-photo about-photo--front"></div>
           <div class="about__badge">
             <span class="about__badge-num">NEW</span>
-            <span class="about__badge-label">Coming<br>Soon</span>
+            <span class="about__badge-label">Now<br>Open</span>
           </div>
         </div>
       </div>
       <div class="about__text">
-        <p class="eyebrow eyebrow--opening reveal">Coming Soon to Knoxville</p>
+        <p class="eyebrow eyebrow--opening reveal">Now Open in Knoxville</p>
         <h2 class="reveal">Authentic South Indian, <em>On Wheels</em></h2>
-        <p class="reveal">Gowda's Food is a brand-new South Indian food truck rolling into Knoxville soon. We're bringing the soul of real South Indian cooking, from crisp dosas and fluffy idli to fragrant biryani and golden bondas, straight to your neighbourhood.</p>
-        <p class="reveal">Everything is made with hand-ground spices and cherished family recipes, cooked fresh to order. This isn't fast food. It's tradition, served with love. Our opening date will be announced soon. <strong>Stay tuned!</strong></p>
+        <p class="reveal">Gowda's Food is a brand-new South Indian food truck now serving Knoxville. We're bringing the soul of real South Indian cooking, from crisp dosas and fluffy idli to fragrant biryani and golden bondas, straight to your neighbourhood.</p>
+        <p class="reveal">Everything is made with hand-ground spices and cherished family recipes, cooked fresh to order. This isn't fast food. It's tradition, served with love. <strong>Come visit us!</strong></p>
         <ul class="about__list reveal">
           <li><span>✦</span> Hand-ground spice blends, made fresh daily</li>
           <li><span>✦</span> Cherished family recipes, cooked to order</li>
@@ -137,8 +137,8 @@
         <span class="card__tag">Signature</span>
         <span class="card__no">01</span>
         <div class="card__body">
-          <h3>Biryani</h3>
-          <p>Veg, Chicken &amp; Egg biryani, fragrant, slow-cooked, and served with our house-made gravy.</p>
+          <h3>Chicken Biryani</h3>
+          <p>Fragrant, slow-cooked chicken biryani, served with our house-made gravy.</p>
         </div>
       </article>
 
@@ -147,18 +147,18 @@
         <span class="card__tag">Crowd Favourite</span>
         <span class="card__no">02</span>
         <div class="card__body">
-          <h3>Masala &amp; Set Dosa</h3>
+          <h3>Masala, Cheese &amp; Paneer Dosa</h3>
           <p>Golden, crisp dosa served with tomato &amp; green chutney and aloo palya.</p>
         </div>
       </article>
 
       <article class="card reveal">
-        <div class="card__img" data-img="tatte"></div>
+        <div class="card__img" data-img="idlivada"></div>
         <span class="card__tag">Steamed Fresh</span>
         <span class="card__no">03</span>
         <div class="card__body">
-          <h3>Idli &amp; Tatte Idli</h3>
-          <p>Soft, steamed idli with sambar, tomato &amp; green chutney, and our fragrant red chutney powder.</p>
+          <h3>Idli</h3>
+          <p>Soft, steamed idli with one medhu vada, sambar, tomato &amp; green chutney.</p>
         </div>
       </article>
 
@@ -206,88 +206,31 @@
 
     <div class="menu-filter reveal" id="menuFilter">
       <button class="menu-filter__btn is-active" data-filter="all">All</button>
-      <button class="menu-filter__btn" data-filter="sunday">Sunday Special</button>
       <button class="menu-filter__btn" data-filter="biryani">Biryani</button>
-      <button class="menu-filter__btn" data-filter="dosa">Dosa</button>
       <button class="menu-filter__btn" data-filter="idli">Idli &amp; Vada</button>
-      <button class="menu-filter__btn" data-filter="paddu">Paddu</button>
       <button class="menu-filter__btn" data-filter="bonda">Bonda &amp; Pakoda</button>
+      <button class="menu-filter__btn" data-filter="dosa">Dosa</button>
+      <button class="menu-filter__btn" data-filter="paddu">Paddu</button>
       <button class="menu-filter__btn" data-filter="sweets">Sweets</button>
     </div>
 
     <div class="menu-card reveal">
       <div class="menu-cats">
-        <section class="menu-cat menu-cat--special" data-cat="sunday">
-          <header class="menu-cat__head">
-            <span class="menu-cat__orn">✦</span>
-            <h3>Sunday Special</h3>
-            <p>Sundays · 9:00 AM – 12:00 PM</p>
-          </header>
-          <ul class="menu-items menu-items--special">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
-              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Thatte Idli</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
-              <span class="m-with">Red chutney powder, tomato chutney, sambar, 1 medhu vada</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Thatte Idli &amp; Chicken Sambar</span><span class="m-dots"></span><span class="m-price">$11.99</span></div>
-              <span class="m-with">Two thatte idli served with chicken sambar</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Puri &amp; Green Chicken Gravy</span><span class="m-dots"></span><span class="m-price">$15.99</span></div>
-              <span class="m-with">Two puri served with green chicken gravy</span>
-            </li>
-          </ul>
-        </section>
-
         <div class="menu-reg" data-reg>
           <h4>✦ Regular Menu ✦</h4>
-          <p>Served evenings · Wed–Sat 3:00 PM – 9:00 PM · Sun 4:00 PM – 9:00 PM</p>
+          <p>Served Mon–Sun · 3:00 PM – 9:00 PM</p>
         </div>
 
         <section class="menu-cat" data-cat="biryani">
           <header class="menu-cat__head">
             <span class="menu-cat__orn">✦</span>
             <h3>Biryani</h3>
-            <p>Each served with our house gravy</p>
+            <p>Served with our house gravy</p>
           </header>
           <ul class="menu-items">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Vegetable Biryani</span><span class="m-dots"></span><span class="m-price">$12.99</span></div>
-              <span class="m-with">Gravy</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Biryani</span><span class="m-dots"></span><span class="m-price">$13.99</span></div>
-              <span class="m-with">Gravy</span>
-            </li>
             <li>
               <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Chicken Biryani</span><span class="m-dots"></span><span class="m-price">$15.99</span></div>
               <span class="m-with">Gravy</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="menu-cat" data-cat="dosa">
-          <header class="menu-cat__head">
-            <span class="menu-cat__orn">✦</span>
-            <h3>Dosa</h3>
-            <p>Crisp, golden, made to order</p>
-          </header>
-          <ul class="menu-items">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
-              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Dosa</span><span class="m-dots"></span><span class="m-price">$9.99</span></div>
-              <span class="m-with">Veg sagu, green &amp; tomato chutney</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Set Dosa</span><span class="m-dots"></span><span class="m-price">$9.99</span></div>
-              <span class="m-with">Veg sagu, green chutney</span>
             </li>
           </ul>
         </section>
@@ -302,20 +245,6 @@
             <li>
               <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Idli</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
               <span class="m-with">Served with one medhu vada, sambar, tomato &amp; green chutney</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="menu-cat" data-cat="paddu">
-          <header class="menu-cat__head">
-            <span class="menu-cat__orn">✦</span>
-            <h3>Paddu</h3>
-            <p>Griddle-roasted &amp; golden</p>
-          </header>
-          <ul class="menu-items">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Paddu</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
-              <span class="m-with">Tomato chutney, green chutney</span>
             </li>
           </ul>
         </section>
@@ -354,6 +283,46 @@
           </ul>
         </section>
 
+        <section class="menu-cat" data-cat="dosa">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Dosa</h3>
+            <p>Crisp, golden, made to order</p>
+          </header>
+          <ul class="menu-items">
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Dosa</span><span class="m-dots"></span><span class="m-price">$9.99</span></div>
+              <span class="m-with">Veg sagu, green &amp; tomato chutney</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Cheese Dosa</span><span class="m-dots"></span><span class="m-price">$11.99</span></div>
+              <span class="m-with">Tomato chutney, green chutney</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Paneer Dosa</span><span class="m-dots"></span><span class="m-price">$11.99</span></div>
+              <span class="m-with">Tomato chutney, green chutney</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="menu-cat" data-cat="paddu">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Paddu</h3>
+            <p>Griddle-roasted &amp; golden</p>
+          </header>
+          <ul class="menu-items">
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Paddu</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
+              <span class="m-with">Tomato chutney, green chutney</span>
+            </li>
+          </ul>
+        </section>
+
         <section class="menu-cat" data-cat="sweets">
           <header class="menu-cat__head">
             <span class="menu-cat__orn">✦</span>
@@ -376,6 +345,11 @@
           </ul>
         </section>
       </div>
+    </div>
+
+    <div class="allergy catering reveal">
+      <span class="allergy__icon" aria-hidden="true">✦</span>
+      <p><strong>Catering</strong> &nbsp;·&nbsp; Only our non-veg dishes and Thatte Idli with 1 Medhu Vada are available for catering.</p>
     </div>
 
     <div class="allergy reveal">
@@ -411,16 +385,10 @@
     </div>
 
     <div class="gallery-strip reveal">
-      <figure class="gpanel" data-img="g17"><figcaption class="gpanel__cap">Puri &amp; Green Chicken Gravy</figcaption></figure>
-      <figure class="gpanel" data-img="g18"><figcaption class="gpanel__cap">Thatte Idli &amp; Chicken Sambar</figcaption></figure>
-      <figure class="gpanel" data-img="g11"><figcaption class="gpanel__cap">Vegetable Biryani</figcaption></figure>
-      <figure class="gpanel" data-img="g1"><figcaption class="gpanel__cap">Egg Biryani</figcaption></figure>
       <figure class="gpanel" data-img="g10"><figcaption class="gpanel__cap">Chicken Biryani</figcaption></figure>
       <figure class="gpanel" data-img="g5"><figcaption class="gpanel__cap">Masala Dosa</figcaption></figure>
       <figure class="gpanel" data-img="g7"><figcaption class="gpanel__cap">Onion Uttapam</figcaption></figure>
-      <figure class="gpanel" data-img="g13"><figcaption class="gpanel__cap">Set Dosa</figcaption></figure>
       <figure class="gpanel" data-img="g14"><figcaption class="gpanel__cap">Idli</figcaption></figure>
-      <figure class="gpanel" data-img="g12"><figcaption class="gpanel__cap">Tatte Idli</figcaption></figure>
       <figure class="gpanel" data-img="g8"><figcaption class="gpanel__cap">Medhu Vada</figcaption></figure>
       <figure class="gpanel" data-img="g3"><figcaption class="gpanel__cap">Onion Paddu</figcaption></figure>
       <figure class="gpanel" data-img="g2"><figcaption class="gpanel__cap">Mysore Bonda</figcaption></figure>
@@ -451,7 +419,7 @@
           </li>
           <li class="reveal">
             <span class="contact__icon">🕑</span>
-            <div><strong>Open Hours</strong><p><span class="nowrap">Wed–Sat&nbsp;·&nbsp;3:00 PM – 9:00 PM</span><br>Sun&nbsp;·&nbsp;<span class="nowrap">9:00 AM – 12:00 PM</span> &amp; <span class="nowrap">4:00 PM – 9:00 PM</span><br><span class="nowrap">Mon &amp; Tue&nbsp;·&nbsp;Closed</span></p></div>
+            <div><strong>Open Hours</strong><p><span class="nowrap">Mon–Sun&nbsp;·&nbsp;3:00 PM – 9:00 PM</span></p></div>
           </li>
         </ul>
       </div>
@@ -484,6 +452,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=34"></script>
+  <script src="script.js?v=35"></script>
 </body>
 </html>

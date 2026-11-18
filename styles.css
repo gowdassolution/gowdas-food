@@ -338,7 +338,11 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 /* ============================================================
    SPECIALTIES
    ============================================================ */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+.cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.8rem; }
+/* 3 per row on a 6-track grid, so a short last row can sit centred */
+.card { grid-column: span 2; }
+.card:nth-child(3n+1):nth-last-child(2) { grid-column: 2 / span 2; }
+.card:nth-child(3n+1):last-child { grid-column: 3 / span 2; }
 
 .card {
   position: relative; isolation: isolate;
@@ -408,12 +412,10 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   .card__no { color: rgba(230,184,76,0.3); }
 }
 
-.card__img[data-img="biryani"] { background-image: url('https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80'); }
 .card__img[data-img="curry"]   { background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=80'); }
 .card__img[data-img="idli"]    { background-image: url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80'); }
 .card__img[data-img="idlivada"] { background-image: url('assets/idli-vada.webp'); }
 .card__img[data-img="pakoda"]  { background-image: url('assets/onion-pakoda.webp'); }
-.card__img[data-img="chickenbiryani"] { background-image: url('assets/chicken-biryani.webp'); }
 .card__img[data-img="holige"]  { background-image: url('assets/holige.webp'); }
 .card__img[data-img="meduvada"] { background-image: url('assets/medu-vada.webp'); }
 .card__img[data-img="bonda"]   { background-image: url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=700&q=80'); }
@@ -588,7 +590,6 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .gpanel[data-img="g7"] { background-image: url('assets/onion-uttapam.webp'); }
 .gpanel[data-img="g8"] { background-image: url('assets/medu-vada.webp'); }
 .gpanel[data-img="g9"] { background-image: url('assets/holige.webp'); }
-.gpanel[data-img="g10"] { background-image: url('assets/chicken-biryani-2.webp'); }
 .gpanel[data-img="g14"] { background-image: url('assets/idli-vada.webp'); }
 .gpanel[data-img="g15"] { background-image: url('assets/onion-pakoda-2.webp'); }
 .gpanel[data-img="g16"] { background-image: url('assets/bread-aloo-bonda.webp'); }
@@ -651,7 +652,9 @@ h3 { font-size: 1.5rem; color: var(--cream); }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 980px) {
-  .cards { grid-template-columns: repeat(2, 1fr); }
+  .cards { grid-template-columns: repeat(4, 1fr); }
+  .card, .card:nth-child(3n+1):nth-last-child(2), .card:nth-child(3n+1):last-child { grid-column: span 2; }
+  .card:nth-child(odd):last-child { grid-column: 2 / span 2; }
   .card:nth-child(3n+2) { margin-top: 0; }
   .card:nth-child(even) { margin-top: 2.6rem; }
 }
@@ -672,7 +675,13 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   .nav__links a { font-size: 1rem; }
   .about__grid { grid-template-columns: 1fr; }
   .about__media { margin: 0 0 3rem; }
-  .menu-cats { columns: 1; }
+  /* one column: source order is tuned for the 2-column balance, so set a natural reading order here */
+  .menu-cats { columns: 1; display: flex; flex-direction: column; }
+  .menu-reg { order: -1; }
+  .menu-cat[data-cat="sweets"] { order: 1; }
+  .menu-cat[data-cat="drinks"] { order: 2; }
+  .menu-cat[data-cat="sweets"], .menu-cat[data-cat="egg"] { margin-bottom: clamp(2.2rem, 4vw, 3.4rem); }
+  .menu-cats.is-single .menu-cat { margin-bottom: 0; }
   /* gallery becomes a swipeable carousel */
   .gallery-strip {
     height: auto; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -684,6 +693,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 }
 @media (max-width: 620px) {
   .cards { grid-template-columns: 1fr; }
+  .cards > .card:nth-child(n) { grid-column: 1 / -1; }
   .card:nth-child(even), .card:nth-child(3n+2) { margin-top: 0; }
   .card { aspect-ratio: 3 / 4; }
   .card__body p { max-height: 9rem; opacity: 1; transform: none; }

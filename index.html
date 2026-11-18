@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=53" />
+  <link rel="stylesheet" href="styles.css?v=55" />
 </head>
 <body>
 
@@ -111,7 +111,7 @@
       <div class="about__text">
         <p class="eyebrow eyebrow--opening reveal">Now Open in Knoxville</p>
         <h2 class="reveal">Authentic South Indian, <em>On Wheels</em></h2>
-        <p class="reveal">Gowda's Food is a brand-new South Indian food truck now serving Knoxville. We're bringing the soul of real South Indian cooking, from crisp dosas and fluffy idli to fragrant biryani and golden bondas, straight to your neighbourhood.</p>
+        <p class="reveal">Gowda's Food is a brand-new South Indian food truck now serving Knoxville. We're bringing the soul of real South Indian cooking, from crisp dosas and fluffy idli to golden bondas and sweet holige, straight to your neighbourhood.</p>
         <p class="reveal">Everything is made with hand-ground spices and cherished family recipes, cooked fresh to order. This isn't fast food. It's tradition, served with love. <strong>Come visit us!</strong></p>
         <ul class="about__list reveal">
           <li><span>✦</span> Hand-ground spice blends, made fresh daily</li>
@@ -133,19 +133,9 @@
 
     <div class="cards">
       <article class="card reveal">
-        <div class="card__img" data-img="chickenbiryani"></div>
-        <span class="card__tag">Signature</span>
-        <span class="card__no">01</span>
-        <div class="card__body">
-          <h3>Chicken Biryani</h3>
-          <p>Fragrant, slow-cooked chicken biryani, served with our house-made gravy.</p>
-        </div>
-      </article>
-
-      <article class="card reveal">
         <div class="card__img" data-img="dosa"></div>
         <span class="card__tag">Crowd Favourite</span>
-        <span class="card__no">02</span>
+        <span class="card__no">01</span>
         <div class="card__body">
           <h3>Masala, Cheese &amp; Paneer Dosa</h3>
           <p>Golden, crisp dosa served with tomato &amp; green chutney and aloo palya.</p>
@@ -155,7 +145,7 @@
       <article class="card reveal">
         <div class="card__img" data-img="idlivada"></div>
         <span class="card__tag">Steamed Fresh</span>
-        <span class="card__no">03</span>
+        <span class="card__no">02</span>
         <div class="card__body">
           <h3>Idli</h3>
           <p>Soft, steamed idli with one medhu vada, sambar, tomato &amp; green chutney.</p>
@@ -165,7 +155,7 @@
       <article class="card reveal">
         <div class="card__img" data-img="meduvada"></div>
         <span class="card__tag">Crispy &amp; Hot</span>
-        <span class="card__no">04</span>
+        <span class="card__no">03</span>
         <div class="card__body">
           <h3>Medhu Vada</h3>
           <p>Crispy golden lentil vada, soft and fluffy inside, served with piping-hot sambar and fresh green chutney.</p>
@@ -175,7 +165,7 @@
       <article class="card reveal">
         <div class="card__img" data-img="pakoda"></div>
         <span class="card__tag">Evening Snacks</span>
-        <span class="card__no">05</span>
+        <span class="card__no">04</span>
         <div class="card__body">
           <h3>Bonda &amp; Pakoda</h3>
           <p>Mysore bonda, egg bonda, banana bonda &amp; onion pakoda, with green chutney and chat masala.</p>
@@ -185,7 +175,7 @@
       <article class="card reveal">
         <div class="card__img" data-img="holige"></div>
         <span class="card__tag">Handmade</span>
-        <span class="card__no">06</span>
+        <span class="card__no">05</span>
         <div class="card__body">
           <h3>Holige &amp; Sweets</h3>
           <p>Traditional holige, bobbatlu / puranpuri, served with only ghee.</p>
@@ -197,7 +187,7 @@
   <!-- Full Menu -->
   <section class="menu section" id="menu">
     <div class="section__head">
-      <p class="eyebrow reveal">Tiffin, Biryani &amp; More</p>
+      <p class="eyebrow reveal">Dosa, Idli &amp; More</p>
       <h2 class="reveal">The Full <em>Menu</em></h2>
       <p class="section__lead reveal">Authentic South Indian favourites, each served fresh with our house-made chutneys and sides.</p>
       <p class="tax-note reveal">All prices are plus applicable taxes</p>
@@ -206,12 +196,13 @@
 
     <div class="menu-filter reveal" id="menuFilter">
       <button class="menu-filter__btn is-active" data-filter="all">All</button>
-      <button class="menu-filter__btn" data-filter="biryani">Biryani</button>
-      <button class="menu-filter__btn" data-filter="idli">Idli &amp; Vada</button>
-      <button class="menu-filter__btn" data-filter="bonda">Bonda &amp; Pakoda</button>
       <button class="menu-filter__btn" data-filter="dosa">Dosa</button>
+      <button class="menu-filter__btn" data-filter="idli">Idli &amp; Vada</button>
       <button class="menu-filter__btn" data-filter="paddu">Paddu</button>
+      <button class="menu-filter__btn" data-filter="bonda">Bonda &amp; Pakoda</button>
       <button class="menu-filter__btn" data-filter="sweets">Sweets</button>
+      <button class="menu-filter__btn" data-filter="egg">Egg &amp; Chicken</button>
+      <button class="menu-filter__btn" data-filter="drinks">Drinks</button>
     </div>
 
     <div class="menu-card reveal">
@@ -221,16 +212,34 @@
           <p>Served Mon–Sun · 3:00 PM – 9:00 PM</p>
         </div>
 
-        <section class="menu-cat" data-cat="biryani">
+        <section class="menu-cat" data-cat="dosa">
           <header class="menu-cat__head">
             <span class="menu-cat__orn">✦</span>
-            <h3>Biryani</h3>
-            <p>Served with our house gravy</p>
+            <h3>Dosa</h3>
+            <p>Crisp, golden, made to order</p>
           </header>
           <ul class="menu-items">
             <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Chicken Biryani</span><span class="m-dots"></span><span class="m-price">$15.99</span></div>
-              <span class="m-with">Gravy</span>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Plain Dosa</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+              <span class="m-with">Veg sagu, green &amp; tomato chutney</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Onion Dosa with Egg</span><span class="m-dots"></span><span class="m-price">$12.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Cheese Dosa</span><span class="m-dots"></span><span class="m-price">$11.99</span></div>
+              <span class="m-with">Tomato chutney, green chutney</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Paneer Dosa</span><span class="m-dots"></span><span class="m-price">$12.99</span></div>
+              <span class="m-with">Tomato chutney, green chutney</span>
             </li>
           </ul>
         </section>
@@ -245,66 +254,6 @@
             <li>
               <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Idli</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
               <span class="m-with">Served with one medhu vada, sambar, tomato &amp; green chutney</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="menu-cat" data-cat="bonda">
-          <header class="menu-cat__head">
-            <span class="menu-cat__orn">✦</span>
-            <h3>Bonda &amp; Pakoda</h3>
-            <p>Fresh-fried evening snacks</p>
-          </header>
-          <ul class="menu-items">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Mysore Bonda</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
-              <span class="m-with">Green chutney, chat masala powder</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Bonda</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
-              <span class="m-with">Onion, carrot, cilantro, chat masala powder</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Pakoda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
-              <span class="m-with">Green chutney</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Banana Bonda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
-              <span class="m-with">Green chutney, chat masala powder</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Bread Aloo Bonda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
-              <span class="m-with">Green chutney, chat masala powder</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Medhu Vada (3 pcs)</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
-              <span class="m-with">Sambar, green chutney</span>
-            </li>
-          </ul>
-        </section>
-
-        <section class="menu-cat" data-cat="dosa">
-          <header class="menu-cat__head">
-            <span class="menu-cat__orn">✦</span>
-            <h3>Dosa</h3>
-            <p>Crisp, golden, made to order</p>
-          </header>
-          <ul class="menu-items">
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Masala Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
-              <span class="m-with">Red chutney powder, tomato &amp; green chutney, aloo palya</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Dosa</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
-              <span class="m-with">Veg sagu, green &amp; tomato chutney</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Cheese Dosa</span><span class="m-dots"></span><span class="m-price">$11.99</span></div>
-              <span class="m-with">Tomato chutney, green chutney</span>
-            </li>
-            <li>
-              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Paneer Dosa</span><span class="m-dots"></span><span class="m-price">$12.99</span></div>
-              <span class="m-with">Tomato chutney, green chutney</span>
             </li>
           </ul>
         </section>
@@ -341,6 +290,85 @@
             <li>
               <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Holige Sambar</span><span class="m-dots"></span><span class="m-price">$5.99</span></div>
               <span class="m-with">20 oz</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="menu-cat" data-cat="bonda">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Bonda &amp; Pakoda</h3>
+            <p>Fresh-fried evening snacks</p>
+          </header>
+          <ul class="menu-items">
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Mysore Bonda</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+              <span class="m-with">Green chutney, chat masala powder</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Chilli Bonda</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Bonda</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+              <span class="m-with">Onion, carrot, cilantro, chat masala powder</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Onion Pakoda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
+              <span class="m-with">Green chutney</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Banana Bonda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
+              <span class="m-with">Green chutney, chat masala powder</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Bread Aloo Bonda</span><span class="m-dots"></span><span class="m-price">$7.99</span></div>
+              <span class="m-with">Green chutney, chat masala powder</span>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--veg" role="img" aria-label="Vegetarian" title="Vegetarian"></span>Medhu Vada (3 pcs)</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+              <span class="m-with">Sambar, green chutney</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="menu-cat" data-cat="egg">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Egg &amp; Chicken</h3>
+            <p>Cooked fresh to order</p>
+          </header>
+          <ul class="menu-items">
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Omelet</span><span class="m-dots"></span><span class="m-price">$8.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Onion Omelet</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Bread Sandwich</span><span class="m-dots"></span><span class="m-price">$10.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Egg Bhurji Khima</span><span class="m-dots"></span><span class="m-price">$13.99</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name"><span class="diet diet--nonveg" role="img" aria-label="Contains chicken or egg" title="Contains chicken or egg"></span>Puri &amp; Green Chicken Gravy</span><span class="m-dots"></span><span class="m-price">$15.99</span></div>
+              <span class="m-with">Two puri served with green chicken gravy</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="menu-cat" data-cat="drinks">
+          <header class="menu-cat__head">
+            <span class="menu-cat__orn">✦</span>
+            <h3>Drinks</h3>
+            <p>Cold &amp; refreshing</p>
+          </header>
+          <ul class="menu-items">
+            <li>
+              <div class="m-row"><span class="m-name">Coke</span><span class="m-dots"></span><span class="m-price">$1.50</span></div>
+            </li>
+            <li>
+              <div class="m-row"><span class="m-name">Water</span><span class="m-dots"></span><span class="m-price">$1.00</span></div>
             </li>
           </ul>
         </section>
@@ -385,7 +413,6 @@
     </div>
 
     <div class="gallery-strip reveal">
-      <figure class="gpanel" data-img="g10"><figcaption class="gpanel__cap">Chicken Biryani</figcaption></figure>
       <figure class="gpanel" data-img="g5"><figcaption class="gpanel__cap">Masala Dosa</figcaption></figure>
       <figure class="gpanel" data-img="g7"><figcaption class="gpanel__cap">Onion Uttapam</figcaption></figure>
       <figure class="gpanel" data-img="g14"><figcaption class="gpanel__cap">Idli</figcaption></figure>

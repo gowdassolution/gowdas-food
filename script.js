@@ -2,11 +2,17 @@
 (function () {
   'use strict';
 
-  /* ---- Loader ---- */
-  window.addEventListener('load', function () {
-    var loader = document.getElementById('loader');
-    if (loader) setTimeout(function () { loader.classList.add('done'); }, 700);
-  });
+  /* ---- Loader ----
+     Hide once the page itself is ready (not after every photo has downloaded,
+     which can take many seconds on mobile data), with a hard cap as a fallback. */
+  var loader = document.getElementById('loader');
+  var hideLoader = function () { if (loader) loader.classList.add('done'); };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(hideLoader, 600); });
+  } else {
+    setTimeout(hideLoader, 600);
+  }
+  setTimeout(hideLoader, 2500);
 
   /* ---- Nav: scrolled state ---- */
   var nav = document.getElementById('nav');

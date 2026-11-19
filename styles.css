@@ -210,7 +210,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 }
 .hero__bg {
   position: absolute; inset: 0;
-  background: url('assets/masala-dosa-hero.webp') center/cover no-repeat;
+  background: url('assets/opt/hero-dosa.webp') center/cover no-repeat;
   transform: scale(1.1);
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
@@ -308,12 +308,12 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 .about-photo--back {
   width: 64%; aspect-ratio: 3/4; top: 1%; left: 1%; z-index: 1;
   transform: rotate(-6deg);
-  background-image: url('assets/onion-pakoda.webp');
+  background-image: url('assets/opt/onion-pakoda.webp');
 }
 .about-photo--front {
   width: 60%; aspect-ratio: 3/4; bottom: 1%; right: 1%; z-index: 2;
   transform: rotate(6deg);
-  background-image: url('assets/medu-vada.webp');
+  background-image: url('assets/opt/medu-vada.webp');
 }
 .about__media:hover .about-photo--back { transform: rotate(-9deg) translate(-5%, -3%); }
 .about__media:hover .about-photo--front { transform: rotate(9deg) translate(5%, 3%); }
@@ -414,11 +414,11 @@ h3 { font-size: 1.5rem; color: var(--cream); }
 
 .card__img[data-img="curry"]   { background-image: url('https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=700&q=80'); }
 .card__img[data-img="idli"]    { background-image: url('https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=700&q=80'); }
-.card__img[data-img="idlivada"] { background-image: url('assets/idli-vada.webp'); }
-.card__img[data-img="pakoda"]  { background-image: url('assets/onion-pakoda.webp'); }
-.card__img[data-img="meduvada"] { background-image: url('assets/medu-vada.webp'); }
+.card__img[data-img="idlivada"] { background-image: url('assets/opt/idli-vada.webp'); }
+.card__img[data-img="pakoda"]  { background-image: url('assets/opt/onion-pakoda.webp'); }
+.card__img[data-img="meduvada"] { background-image: url('assets/opt/medu-vada.webp'); }
 .card__img[data-img="bonda"]   { background-image: url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=700&q=80'); }
-.card__img[data-img="dosa"]    { background-image: url('https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=700&q=80'); }
+.card__img[data-img="dosa"]    { background-image: url('assets/menu/masala-dosa.webp'); }
 .card__img[data-img="sweets"]  { background-image: url('https://images.unsplash.com/photo-1666190092159-3171cf0fbb12?auto=format&fit=crop&w=700&q=80'); }
 
 /* ============================================================
@@ -667,6 +667,7 @@ h3 { font-size: 1.5rem; color: var(--cream); }
   .menu-card::before { inset: 7px; }
   .m-name { font-size: 1.12rem; }
   .m-price { font-size: 1.1rem; }
+  .hero__bg { background-image: url('assets/opt/hero-dosa-sm.webp'); }
   /* hero badge on phones: compact so the dosa photo stays visible */
   .opening { padding: 0.6rem 1.15rem 0.65rem; gap: 0.1rem; margin-bottom: 1.2rem; border-radius: 12px;
     background: rgba(10,9,8,0.45); box-shadow: 0 0 0 3px rgba(230,184,76,0.06), 0 12px 26px -18px rgba(0,0,0,0.9); }

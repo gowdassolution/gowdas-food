@@ -9,7 +9,10 @@
   <meta name="description" content="Gowda's Food: authentic South Indian cuisine crafted with tradition and served with love. Premium flavours, timeless recipes, unforgettable dining." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- fonts load in the background so a slow connection never holds up the page -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css?v=74" />
 </head>
 <body>
@@ -17,7 +20,7 @@
   <!-- Loader -->
   <div class="loader" id="loader">
     <div class="loader-mark">
-      <img src="assets/opt/logo.webp" alt="Gowda's Food" class="loader-logo" width="512" height="512" />
+      <img src="assets/opt/logo.webp" alt="Gowda's Food" class="loader-logo" width="250" height="250" />
     </div>
   </div>
 
@@ -44,7 +47,7 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="brand" aria-label="Gowda's Food home">
-        <img src="assets/opt/logo.webp" alt="Gowda's Food" class="brand__mark" width="512" height="512" />
+        <img src="assets/opt/logo.webp" alt="Gowda's Food" class="brand__mark" width="56" height="56" />
         <span class="brand__text">
           <span class="brand__name">GOWDA'S</span>
           <span class="brand__sub">FOOD</span>
@@ -488,7 +491,7 @@
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
-        <img src="assets/opt/logo.webp" alt="Gowda's Food" class="footer__mark" width="512" height="512" />
+        <img src="assets/opt/logo.webp" alt="Gowda's Food" class="footer__mark" width="72" height="72" />
         <span class="brand__name">GOWDA'S FOOD</span>
         <p class="footer__tag">Made with tradition. Served with love.</p>
       </div>
